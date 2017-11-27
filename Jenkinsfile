@@ -56,5 +56,10 @@ pipeline {
         sleep 5
       }
     }
+    stage('END ?') {
+      steps {
+        input(message: 'C\'est ok en PROD ?', id: 'OUI / NON')
+      }
+    }
   }
 }
